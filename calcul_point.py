@@ -1,5 +1,5 @@
 """
-j'ai  les points obtenue dans une liste des dictionnaires
+j'ai  les points obtenues dans une liste des dictionnaires
     et les pondérations aussi
     """
 def calcul_p(po:list,pond:list):
@@ -25,7 +25,17 @@ def calcul_point_dict(ligne:dict,pond:list):
     return ligne
 def pourcentage(point:float,total:float):
     return 100*point/total
-def calcul_point_list(list_etudiant:list,pond:list):
+def calcul_total(liste:list):
+    new_list=[]
+    for a in liste:
+        a['total']=total_cours_credit(a['cours'])
+        new_list.append(a)
+    return new_list
+        
+    
+    
+    
+def calcul_point_list(list_etudiant:list,pond:list):  
     new_list=[]                                                                 
     for i in list_etudiant:
         new_list.append(calcul_point_dict(i,pond))
